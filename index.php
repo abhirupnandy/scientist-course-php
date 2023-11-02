@@ -41,10 +41,18 @@
 	$config = require 'config.php';
 	
 	$db = new Database($config['database'], 'admin', 'admin@123');
-//	$posts = $db -> query("select * from posts where id > 1") -> fetch(PDO::FETCH_ASSOC);
-	$posts = $db -> query("select * from posts") -> fetchAll(PDO::FETCH_ASSOC);
+	
+	$id = $_GET['id'];
+//	$query = "select * from posts where id ={$id}";
+	$query = "select * from posts where id = :id";
+
+//	dd($query);
+	
+	$posts = $db -> query($query, ['id' => $id]) -> fetch(PDO::FETCH_ASSOC);
+	dd($posts);
+	
+	//	$posts = $db -> query("select * from posts") -> fetchAll(PDO::FETCH_ASSOC);
 	
 	//	foreach ( $posts as $post ) {
 	//		echo "<li>" . $post['title'] . "</li>";
 	//	}
-	dd($posts);
