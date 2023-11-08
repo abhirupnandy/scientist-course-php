@@ -20,19 +20,5 @@
 		return $_SERVER['REQUEST_URI'] === $value;
 	}
 	
-	function abort($value = 404)
-	{
-		http_response_code($value);
-		require "controllers/{$value}.php";
-		die();
-	}
 	
-	function routeToController($uri, $routes)
-	{
-		if ( array_key_exists($uri, $routes) ) {
-			require $routes[$uri];
-		} else {
-			abort();
-		}
-	}
 	
