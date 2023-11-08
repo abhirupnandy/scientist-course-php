@@ -3,12 +3,13 @@
 	$config = require 'config.php';
 	$db = new Database($config['database'], 'admin', 'admin@123');
 	
-	$heading = 'My Notes';
+	$heading = 'Note';
+//	dd($_GET['id']);
+	$id = $_GET['id'];
 	
-	$notes = $db -> query('SELECT * FROM my_app.notes WHERE user_id =2') -> fetchAll();
-
+	$note = $db -> query('SELECT * FROM my_app.notes WHERE id = :id', ['id' => $id]) -> fetch();
 //	dd($notes);
 
 //	dd($_SERVER['REQUEST_URI']);
 //	require 'functions.php';
-	require 'views/notes.view.php';
+	require 'views/note.view.php';
