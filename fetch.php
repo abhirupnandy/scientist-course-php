@@ -10,20 +10,6 @@
 		echo "<h1 class='text-3xl font-semibold text-gray-900'>No Data</h1>";
 		exit();
 	}
-//	$key = $_GET['enrollment'];
-//	$note = $db -> query("SELECT * FROM results WHERE enrollment = :key",
-//		[
-//			'key' => $key
-//		]) -> fetch();
-//
-//	//	check if note is empty - return no data html
-//	if ( empty($note) ) {
-//		//		try to find by email
-//		$note = $db -> query("SELECT * FROM results WHERE email = :key",
-//			[
-//				'key' => $key
-//			]) -> fetch();
-//	}
 	$enrollment = $_GET['enrollment'];
 	$email = $_GET['email'];
 	
@@ -43,7 +29,7 @@
 	$email = $note['email'];
 	$batch = $note['batch'];
 	$date = date('jS F,Y', strtotime($note['date']));
-//	marks for 13 subjects
+
 	$marks = [
 		'1' => $note['section1'],
 		'2' => $note['section2'],
