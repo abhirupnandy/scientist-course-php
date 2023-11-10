@@ -1,20 +1,16 @@
 <?php
-	
-	use JetBrains\PhpStorm\NoReturn;
-	
+
 	$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
-//	dd(parse_url($uri));
-	
 	$routes = [
-		'/' => 'controllers/index.php',
-		'/about' => 'controllers/about.php',
-		'/notes' => 'controllers/notes.php',
-		'/note' => 'controllers/note.php',
-		'/contact' => 'controllers/contact.php'
+	'/ai/' => 'controllers/index.php',
+	'/ai/about' => 'controllers/about.php',
+	'/ai/results' => 'controllers/results.php',
+	'/ai/course' => 'controllers/course.php',
+	'/ai/contact' => 'controllers/contact.php'
 	];
 	
-	#[NoReturn] function abort($value = 404): void
+	function abort($value = 404): void
 	{
 		http_response_code($value);
 		require "controllers/{$value}.php";
@@ -29,5 +25,5 @@
 			abort();
 		}
 	}
-	
+
 	routeToController($uri, $routes);

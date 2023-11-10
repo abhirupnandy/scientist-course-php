@@ -1,7 +1,4 @@
 <?php
 	
-	$heading = 'About Us';
-
-//	dd($_SERVER['REQUEST_URI']);
-//	require 'functions.php';
+	$heading = 'About the Course';
 	require 'views/about.view.php';

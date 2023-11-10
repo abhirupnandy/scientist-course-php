@@ -1,10 +1,9 @@
 <?php
 	return [
 		'database' => [
-			'host' => 'localhost',
-			'port' => 3306,
-			'dbname' => 'my_app',
-			'charset' => 'utf8mb4',
+			'host' => '199.79.62.107',
+			'port' => '3306',
+			'dbname' => 'textajfo_scientist_course',
 		],
 	];
 	

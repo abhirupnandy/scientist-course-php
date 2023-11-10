@@ -1,24 +1,11 @@
 <?php
-	//	function to echo php version
-	function php_version()
-	{
-		echo phpversion();
-	}
-	
-	function dd($value)
-	{
-		echo '<pre>';
-		var_dump($value);
-		echo '</pre>';
-		die();
-	}
-
-//	dd($_SERVER['REQUEST_URI']);
-	
-	function urlIs($value)
+	function urlIs($value): bool
 	{
 		return $_SERVER['REQUEST_URI'] === $value;
 	}
-	
-	
-	
+
+//	function to check if the get variable is set
+	function postIsSet($value): bool
+	{
+		return isset($_POST[$value]);
+	}

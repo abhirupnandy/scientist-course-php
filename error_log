@@ -1,0 +1,14 @@
+[10-Nov-2023 06:36:19 UTC] PHP Warning:  require(/aicontrollers/index.php): Failed to open stream: No such file or directory in /home2/textajfo/public_html/ai/router.php on line 49
+[10-Nov-2023 06:36:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/aicontrollers/index.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/textajfo/public_html/ai/router.php:49
+Stack trace:
+#0 /home2/textajfo/public_html/ai/router.php(55): routeToController('/ai/', Array, '/ai')
+#1 /home2/textajfo/public_html/ai/index.php(5): require('/home2/textajfo...')
+#2 {main}
+  thrown in /home2/textajfo/public_html/ai/router.php on line 49
+[10-Nov-2023 06:36:53 UTC] PHP Warning:  require(/ai/controllers/index.php): Failed to open stream: No such file or directory in /home2/textajfo/public_html/ai/router.php on line 49
+[10-Nov-2023 06:36:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/ai/controllers/index.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/textajfo/public_html/ai/router.php:49
+Stack trace:
+#0 /home2/textajfo/public_html/ai/router.php(55): routeToController('/ai/', Array, '/ai/')
+#1 /home2/textajfo/public_html/ai/index.php(5): require('/home2/textajfo...')
+#2 {main}
+  thrown in /home2/textajfo/public_html/ai/router.php on line 49

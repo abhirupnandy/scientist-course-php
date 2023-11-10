@@ -1,7 +1,4 @@
 <?php
 	
-	$heading = '404';
-
-//	dd($_SERVER['REQUEST_URI']);
-//	require 'functions.php';
+	$heading = 'Wrong Page';
 	require 'views/404.view.php';
